@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Payroll</title>
+    <style>
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        label, input, button {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        button {
+            background-color: #0077be;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f8e;
+        }
+
+        table {
+            margin-top: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #fff;
+            text-align: center;
+        }
+
+        table th {
+            background-color: rgba(0, 0, 50, 0.8);
+        }
+
+        .delete-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="redirectToHomepage()">Homepage</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <label for="name">Employee Name:</label>
+            <input type="text" id="name" placeholder="Enter employee name">
+
+            <label for="daysWorked">Days Worked:</label>
+            <input type="number" id="daysWorked" placeholder="Enter days worked" min="0">
+
+            <label for="dailyRate">Daily Rate (PHP):</label>
+            <input type="number" id="dailyRate" placeholder="Enter daily rate" min="0">
+
+            <label for="deduction">Deduction Amount (PHP):</label>
+            <input type="number" id="deduction" placeholder="Enter deduction amount" min="0">
+
+            <button onclick="addEmployee()">Add Employee</button>
+        </div>
+
+        <table id="payrollTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Employee Name</th>
+                    <th>Days Worked</th>
+                    <th>Daily Rate</th>
+                    <th>Gross Pay</th>
+                    <th>Deduction Amount</th>
+                    <th>Net Pay</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="delete-container">
+            <label for="deleteIndex">Enter Line Number to Delete:</label>
+            <input type="number" id="deleteIndex" placeholder="Enter line number" min="1">
+            <button onclick="deleteEmployee()">Delete Employee</button>
+        </div>
+    </main>
+
+    <script src="crips.js"></script>
+
+</body>
+</html>

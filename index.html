@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homepage</title>
+    <style>
 
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 50px auto;
+            gap: 20px;
+            max-width: 1000px;
+        }
+
+        .button-container .button-placeholder {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .button-container .button-placeholder:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #0077be;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: rgba(0, 0, 50, 0.8);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ITC Project</h1>
+    </header>
+    <main>
+        <div class="button-container">
+            <a href="conversion.html" class="button-placeholder">Conversion</a>
+            <a href="income.html" class="button-placeholder">Income</a>
+            <a href="nthfact.html" class="button-placeholder">Nth-Factorial</a>
+            <a href="payroll.html" class="button-placeholder">Payroll</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Albert Geoff S. Buison</p>
+    </footer>
+</body>
+</html>

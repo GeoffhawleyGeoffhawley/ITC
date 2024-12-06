@@ -1,0 +1,27 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0077be, #001f3f);
+    color: #fff;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    padding: 20px;
+    background-color: rgba(0, 0, 50, 0.8);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    margin-top: 20px;
+}
+

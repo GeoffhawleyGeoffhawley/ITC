@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Factorial</title>
+    <style>
+        .calculator-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        label, select, input, button {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        input[readonly] {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        button {
+            background-color: #0077be;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f8e;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="redirectToHomepage()">Homepage</h1>
+    </header>
+    <main>
+        <div class="calculator-container">
+            <label for="operation">Select Operation:</label>
+            <select id="operation" onchange="clearFields()">
+                <option value="factorial">Factorial (While Loop)</option>
+                <option value="sum">Sum (Do While Loop)</option>
+                <option value="average">Average (For Loop)</option>
+            </select>
+
+            <label for="number">Enter a Positive Integer (N):</label>
+            <input type="number" id="number" placeholder="Enter N" min="1">
+
+            <button onclick="performOperation()">Calculate</button>
+
+            <div class="result" id="result"></div>
+        </div>
+    </main>
+    <script src="crips.js"></script>
+</body>
+</html>
